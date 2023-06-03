@@ -1,0 +1,9 @@
+= Laptop As Code
+A stateless computer
+
+== How to generate HTML slides
+
+[source, bash]
+----
+./build-slides.sh
+----
