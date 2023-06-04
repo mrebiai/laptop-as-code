@@ -1,0 +1,55 @@
+body:before {
+    content: 'Laptop As Code - Mehdi Rebiai';
+    font-family: "Montserrat", Impact, sans-serif;
+    position: fixed;
+    padding: 1em;
+    width: 100%;
+    bottom: 0;
+    height: 2em;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+}
+body:after {
+    content: ' ';
+    position: fixed;
+    bottom: 0;
+    left: 1em;
+    bottom: 1em;
+    width: 12em;
+    height: 12em;
+    background: url("data:image/png;base64,${CONFERENCE_PNG_BASE64}");
+    background-size: 12em;
+    background-repeat: no-repeat;
+    background-position: 3% 96%;
+}
+
+.reveal:before {
+    content: ' ';
+    position: fixed;
+    padding: 1em;
+    width: 10em;
+    height: 10em;
+    background-image: url("data:image/png;base64,${QRCODE_PNG_BASE64}");
+    background-size: 5em;
+    background-repeat: no-repeat;
+}
+
+/* SLIDE TITLES */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6  {
+    font-family: "Montserrat", Impact, sans-serif;
+    color: brown;
+    text-transform: none;
+    /*font-family: "Source Sans Pro", Helvetica, sans-serif;*/
+    /*font-weight: 600;*/
+    /*line-height: 1.2;*/
+    /*letter-spacing: normal;*/
+    /*text-transform: uppercase;*/
+    /*text-shadow: none;*/
+    /*word-wrap: break-word;*/
+}
+
+/* DEFAULT */
+.reveal {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
