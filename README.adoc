@@ -17,3 +17,4 @@ A stateless computer
 ** https://github.com/mrebiai/laptop-as-code-role-dev-back[^]
 ** https://github.com/mrebiai/laptop-as-code-role-dev-front[^]
 ** https://github.com/mrebiai/laptop-as-code-role-user[^] (1 branch per user profile)
+* Bootstrap : https://github.com/mrebiai/laptop-as-code-env/blob/main/ansible/bootstrap.sh[^]
