@@ -8,8 +8,7 @@ A stateless computer
 * Laptop As Code?
 * Bash
 * Ansible
-* Laptop As Code with Ansible
-* Demo
+* Laptop As Code with Ansible (& Demo)
 
 == Who am I?
 Mehdi Rebiai::
@@ -242,3 +241,60 @@ image::diagrams/flowchart-ansible-pull.svg[]
 === Sources - LearnLinuxTV
 * Getting started with Ansible in 16 videos : https://www.youtube.com/playlist?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70[^]
 * Ansible for laptop/desktop : https://youtu.be/gIDywsGBqf4[^]
+
+== Laptop As Code with Ansible
+image::images/cool.gif[]
+
+Step by step... with a demo 🤞
+
+=== Step 1 - Add a bootstrap (1/2)
+* SSH & Git configuration
+* Ansible installation
+* Inventory creation, having some environment variables (asking some questions...)
+
+=== Step 1 - Add a bootstrap (2/2)
+image::diagrams/flowchart-bootstrap.svg[]
+
+=== Step 2 - A Playbook... but without external Roles
+* Shareable scripting ✅
+* Easy customization ❌
+* Readable configuration ✅
+
+=== Step 3 - A Playbook... but with external Roles
+* Shareable scripting ✅
+* Easy customization ✅
+* Readable configuration ✅
+
+What strategy for external Roles 🤔 ? +++<br/>+++ How to keep a unique Playbook 🤔🤔 ?
+
+=== Wait a minute, I need a concrete example
+image::images/what.gif[] 
+
+[.columns]
+=== Scenario - 3 users
+:avatar-width: 100
+
+[.columns]
+*Alice* +++<br/>+++ image:images/alice.png[width={avatar-width}] +++<br/>+++ backend +++<br/>+++ developer
+
+[.columns]
+*Bob* +++<br/>+++ image:images/bob.png[width={avatar-width}] +++<br/>+++ employee?
+
+[.columns]
+*Carol* +++<br/>+++ image:images/carol.jpg[width={avatar-width}] +++<br/>+++ full stack +++<br/>+++ developer
+
+=== Role Strategy
+image::diagrams/flowchart-role-example.svg[width=700]
+
+=== 🎉 Demo 🥳
+
+🍀 🤞
+
+=== Lectra example (today)
+TODO
+
+== Thank you ! 
+
+Questions?
+
+https://github.com/mrebiai/laptop-as-code

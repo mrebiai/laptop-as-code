@@ -1,0 +1,15 @@
+flowchart LR
+    subgraph github.io
+        remoteBootstrap[bootstrap.sh]
+    end
+    subgraph localhost : $HOME
+        subgraph localTmp[tmpFolder]
+            localPlayBook[playbook.yml] 
+        end
+        run[curl & bash] -. 1- calls .-> remoteBootstrap
+        remoteBootstrap -. creates .-> localInventory
+        remoteBootstrap -. runs .-> Installations:\ngit,ssh,ansible
+        localPlayBook -. uses .-> localInventory
+        localPlayBook -. 2- ansible-playbook .-> localPlayBook
+        localInventory[inventory_127.0.0.1\nx=foo,y=bar]
+    end

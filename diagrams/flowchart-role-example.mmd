@@ -1,0 +1,23 @@
+flowchart TD
+    playbook[<b>playbook</b>]
+    subgraph user[<b>user</b>]
+        alice[<b>alice</b>]
+        bob[<b>bob</b>]
+        carol[<b>carol</b>]
+    end
+    playbook .-> user
+    devfront[<b>dev-front</b>\nvscode,nvm,...]
+    devback[<b>dev-back</b>\nintellij,docker,...]
+    sdk[<b>sdk</b>\njava,scala,kotlin,gradle,maven,sbt,...]
+    base[<b>role-base</b>\nbash,git,ssh,...]
+    devback -. depends on .-> sdk
+    devback -. depends on .-> base
+    devfront -. depends on .-> base
+    alice -. depends on .-> devback
+    bob -. depends on .-> base
+    carol -.depends on .-> devfront
+    carol -.depends on .-> devback
+
+    style alice fill:pink
+    style bob fill:pink
+    style carol fill:pink
