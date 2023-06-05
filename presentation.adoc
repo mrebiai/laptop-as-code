@@ -170,6 +170,7 @@ node3.example.com
     ansible.builtin.yum:
       name: httpd
       state: latest
+    when: ansible_distribution == 'CentOS'
   - name: Write the apache config file
     tags: httpd
     ansible.builtin.template:
@@ -195,6 +196,7 @@ node3.example.com
 === Ansible (5/{nb-ansible-slides})
 * A *Task* calls a *Module* (yum, apt, service...) => https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html[Built-In index] 
 * Every *Task* can contain *Tag(s)*
+* Every *Task* can have a *When* clause (*Skipped* if false)
 * Some *Tasks* can be defined in *Roles*
 * A *Playbook* can call *Tasks* and/or *Roles*
 
@@ -267,6 +269,17 @@ image::diagrams/flowchart-bootstrap.svg[]
 
 What strategy for external Roles 🤔 ? +++<br/>+++ How to keep a unique Playbook 🤔🤔 ?
 
+=== Step 4 - A generic user role, forked by user
+* 1 unique Playbook calling...
+* ...1 unique user Role (forked by user) calling...
+* ...many Roles (and their Tasks) with dependencies to other Roles 
+
+.*User Role Installation locally with dependencies :*
+[source, bash]
+----
+ansible-galaxy install git+<gitUrlToUserRole>,<version> --force-with-deps
+----
+
 === Wait a minute, I need a concrete example
 image::images/what.gif[] 
 
@@ -287,13 +300,18 @@ image::images/what.gif[]
 image::diagrams/flowchart-role-example.svg[width=700]
 
 === 🎉 Demo 🥳
-
 🍀 🤞
 
 === Lectra example (today)
 TODO
 
-== Thank you ! 
+== Conclusion
+* Good feedbacks
+* Only Linux today but
+** some Windows users are interested in migrating to Linux
+** Ansible Roles can be improved to manage MacOS
+
+=== Thank you ! 
 
 Questions?
 
