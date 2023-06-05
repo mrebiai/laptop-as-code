@@ -10,6 +10,12 @@ A stateless computer
 * Ansible
 * Laptop As Code with Ansible (& Demo)
 
+=== ⚠️ Not in this presentation
+* OS installation
+* OS Ghosts
+* local/remote VM as desktop 
+* IDE in your browser
+
 == Who am I?
 Mehdi Rebiai::
 * icon:github[] https://github.com/mrebiai
@@ -267,12 +273,12 @@ image::diagrams/flowchart-bootstrap.svg[]
 * Easy customization ✅
 * Readable configuration ✅
 
-What strategy for external Roles 🤔 ? +++<br/>+++ How to keep a unique Playbook 🤔🤔 ?
+What strategy for external Roles 🤔 ? How to install them locally 🤔🤔 ? +++<br/>+++ How to keep a unique Playbook 🤔🤔🤔 ?
 
 === Step 4 - A generic user role, forked by user
-* 1 unique Playbook calling...
-* ...1 unique user Role (forked by user) calling...
-* ...many Roles (and their Tasks) with dependencies to other Roles 
+* The Bootstrap asks you your user Role and installs it (with dependencies)
+* The Playbook calls the role by its name, and it will be yours 
+* Your user Role calls other Roles (and their Tasks) 
 
 .*User Role Installation locally with dependencies :*
 [source, bash]

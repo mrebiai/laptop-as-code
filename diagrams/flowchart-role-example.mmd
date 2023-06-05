@@ -1,11 +1,13 @@
 flowchart TD
+    bootstrap[<b>bootstrap</b>]
     playbook[<b>playbook</b>]
     subgraph user[<b>user</b>]
         alice[<b>alice</b>]
         bob[<b>bob</b>]
         carol[<b>carol</b>]
     end
-    playbook .-> user
+    bootstrap -. 1- installs your user Role locally with deps .-> user
+    playbook -. 2- runs your user Role .-> user
     devfront[<b>dev-front</b>\nvscode,nvm,...]
     devback[<b>dev-back</b>\nintellij,docker,...]
     sdk[<b>sdk</b>\njava,scala,kotlin,gradle,maven,sbt,...]
