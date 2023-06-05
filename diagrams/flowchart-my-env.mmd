@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph github.com
+        subgraph remoteMyEnv[my-env.git]
+            remoteRunSh[run.sh]
+        end
+        subgraph remoteMyCompanyEnv[my-company-env.git]
+            remoteFiles[.m2\n.gradle\n.sbt\n.npmrc\n...]
+        end
+    end
+    subgraph localhost : $HOME
+        subgraph localMyEnv[my-env.git]
+            localRunSh[run.sh]
+        end
+        remoteRunSh -. 1- git clone .-> localRunSh
+        localRunSh -. 2- software installation .-> localRunSh
+        subgraph localMyCompanyEnv[my-company-env.git]
+            localFiles[.m2\n.gradle\n.sbt\n.npmrc\n...]
+        end
+        localRunSh -. 3- git clone & links creation .-> localFiles
+        remoteFiles -. git clone .-> localFiles
+        homeFiles[.m2\n.gradle\n.sbt\n.npmrc\n...]
+        homeFiles -. linkedTo .-> localFiles
+    end

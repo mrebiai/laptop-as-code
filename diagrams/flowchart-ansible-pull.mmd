@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph github.com
+        subgraph remoteMyEnv[my-env.git]
+            remotePlayBook[playbook.yml]
+        end
+        subgraph remoteMyCompanyEnv[my-company-env.git]
+            remoteFiles[.m2\n.gradle\n.sbt\n.npmrc\n...]
+        end
+    end
+    subgraph localhost : $HOME
+        subgraph localTmp[tmpFolder]
+            localPlayBook[playbook.yml] 
+            localFiles[.m2\n.gradle\n.sbt\n.npmrc\n...]
+        end
+        localPlayBook -. uses .-> localInventory
+        remotePlayBook -. 1- ansible-pull .-> localPlayBook
+        localPlayBook -. 2- ansible-playbook .-> localPlayBook
+        remoteFiles -. git clone .-> localTmp
+        localInventory[inventory_127.0.0.1]
+        homeFiles[.m2\n.gradle\n.sbt\n.npmrc\n...]
+        localFiles -. 3- copy .->  homeFiles
+    end

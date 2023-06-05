@@ -11,7 +11,7 @@ A stateless computer
 * Laptop As Code with Ansible
 * Demo
 
-== How am I?
+== Who am I?
 Mehdi Rebiai::
 * icon:github[] https://github.com/mrebiai
 * icon:envelope[] mehdi.rebiai.dev@gmail.com
@@ -75,7 +75,7 @@ NOTE: OS already installed
 == Bash
 image::images/press-any-key.gif[]
 
-=== `run.sh` image:images/bash-logo.jpg[width=100]
+=== `my-env/run.sh` image:images/bash-logo.jpg[width=100]
 [source, bash]
 ----
 install() {
@@ -94,6 +94,9 @@ installCommon() {
 }
 ...
 ----
+
+=== `my-env/run.sh` workflow
+image::diagrams/flowchart-my-env.svg[]
 
 [.columns]
 === A good scripting?
@@ -115,7 +118,7 @@ But::
 == Ansible
 image::images/magic.gif[]
 
-:nb-ansible-slides: 8
+:nb-ansible-slides: 9
 
 === Ansible (1/{nb-ansible-slides})
 .https://docs.ansible.com/[^]
@@ -230,6 +233,11 @@ Laptop As Code with Ansible::
 * `ansible-pull -U <giturl> ...` =
 ** `git clone/pull ...` +
 ** `ansible-playbook ...`
+
+=== Ansible (9/{nb-ansible-slides})
+*Laptop As Code with Ansible*
+
+image::diagrams/flowchart-ansible-pull.svg[]
 
 === Sources - LearnLinuxTV
 * Getting started with Ansible in 16 videos : https://www.youtube.com/playlist?list=PLT98CRl2KxKEUHie1m24-wkyHpEsa4Y70[^]

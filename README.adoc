@@ -11,7 +11,7 @@ A stateless computer
 == Resources
 * HTML Slides : https://mrebiai.github.io/laptop-as-code/[^]
 * Playbook example : https://github.com/mrebiai/laptop-as-code-playbook[^]
-* Roles examples
+* Role examples :
 ** https://github.com/mrebiai/laptop-as-code-role-base[^]
 ** https://github.com/mrebiai/laptop-as-code-role-sdk[^]
 ** https://github.com/mrebiai/laptop-as-code-role-dev-back[^]
