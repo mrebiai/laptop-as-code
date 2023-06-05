@@ -303,7 +303,7 @@ image::diagrams/flowchart-role-example.svg[width=700]
 🍀 🤞
 
 === Lectra example (today)
-TODO
+image::diagrams/flowchart-lectra.svg[width=700]
 
 == Conclusion
 * Good feedbacks

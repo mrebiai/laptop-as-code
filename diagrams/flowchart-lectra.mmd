@@ -1,0 +1,17 @@
+flowchart TD
+    subgraph myrole[<b>my-role</b> : forked by user]
+        user1
+        user2
+    end
+    playbook[<b>lectra-playbook</b>] .-> myrole
+    subgraph myteamrole[<b>myteam-role</b> : forked by team]
+        teamA
+        teamB
+        teamData
+    end
+    myrole .-> myteamrole
+    teamData .-> data[<b>lectra-role-data</b> : kafka, azure storage explorer, ...]
+    data .-> cloud[<b>lectra-role-cloud</b> : docker, kubctl, helm, ...]
+    data .-> sdk[<b>lectra-role-sdk</b> : scala, kotlin, java, maven, gradle, sbt, ...]
+    cloud .-> base[<b>lectra-role-base</b> : intellij, vscode, bash config, ssh, git, ...]
+    base .-> minimal[<b>lectra-role-minimal</b> : antivirus, chrome, vpn client, ...]
