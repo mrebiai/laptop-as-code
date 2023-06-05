@@ -7,3 +7,13 @@ A stateless computer
 ----
 ./build-slides.sh
 ----
+
+== Resources
+* HTML Slides : https://mrebiai.github.io/laptop-as-code/[^]
+* Playbook example : https://github.com/mrebiai/laptop-as-code-playbook[^]
+* Roles examples
+** https://github.com/mrebiai/laptop-as-code-role-base[^]
+** https://github.com/mrebiai/laptop-as-code-role-sdk[^]
+** https://github.com/mrebiai/laptop-as-code-role-dev-back[^]
+** https://github.com/mrebiai/laptop-as-code-role-dev-front[^]
+** https://github.com/mrebiai/laptop-as-code-role-user[^] (1 branch per user profile)
