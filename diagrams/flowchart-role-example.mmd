@@ -11,7 +11,7 @@ flowchart TD
     devfront[<b>dev-front</b>\nvscode,nvm,...]
     devback[<b>dev-back</b>\nintellij,docker,...]
     sdk[<b>sdk</b>\njava,scala,kotlin,gradle,maven,sbt,...]
-    base[<b>role-base</b>\nbash,git,ssh,...]
+    base[<b>base</b>\nbash,git,ssh,...]
     devback -. depends on .-> sdk
     devback -. depends on .-> base
     devfront -. depends on .-> base
