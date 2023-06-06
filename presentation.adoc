@@ -14,7 +14,7 @@ A stateless computer
 * OS installation
 * OS Ghosts
 * local/remote VM as desktop 
-* IDE in your browser
+* IDE in browser
 
 == Who am I?
 Mehdi Rebiai::
@@ -263,12 +263,12 @@ Step by step... with a demo 🤞
 === Step 1 - Add a bootstrap (2/2)
 image::diagrams/flowchart-bootstrap.svg[]
 
-=== Step 2 - A Playbook... but without external Roles
+=== Step 2 - A Playbook... without external Roles
 * Shareable scripting ✅
 * Easy customization ❌
 * Readable configuration ✅
 
-=== Step 3 - A Playbook... but with external Roles
+=== Step 3 - A Playbook... with external Roles
 * Shareable scripting ✅
 * Easy customization ✅
 * Readable configuration ✅
@@ -291,7 +291,7 @@ image::images/what.gif[]
 
 [.columns]
 === Scenario - 3 users
-:avatar-width: 100
+:avatar-width: 180
 
 [.columns]
 *Alice* +++<br/>+++ image:images/alice.png[width={avatar-width}] +++<br/>+++ backend +++<br/>+++ developer
@@ -300,7 +300,7 @@ image::images/what.gif[]
 *Bob* +++<br/>+++ image:images/bob.png[width={avatar-width}] +++<br/>+++ employee?
 
 [.columns]
-*Carol* +++<br/>+++ image:images/carol.jpg[width={avatar-width}] +++<br/>+++ full stack +++<br/>+++ developer
+*Carol* +++<br/>+++ image:images/carol.png[width={avatar-width}] +++<br/>+++ full stack +++<br/>+++ developer
 
 === Role Strategy
 image::diagrams/flowchart-role-example.svg[width=700]
@@ -316,6 +316,7 @@ image::diagrams/flowchart-lectra.svg[width=700]
 * Only Linux today but
 ** some Windows users are interested in migrating to Linux
 ** Ansible Roles can be improved to manage MacOS
+* Other interesting tools : Nix Packages, NixOS
 
 === Thank you ! 
 
